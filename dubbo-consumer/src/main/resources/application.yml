@@ -20,6 +20,8 @@ dubbo:
     address: spring-cloud://localhost
   cloud:
     subscribed-services: dubbo-provider
+  consumer:
+    check: false
 
 server:
   port: ${PORT:5000}
