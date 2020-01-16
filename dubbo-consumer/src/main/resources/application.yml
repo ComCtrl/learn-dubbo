@@ -8,7 +8,7 @@ spring:
     nacos:
       # Nacos 服务发现与注册配置
       discovery:
-        server-addr: 127.0.0.1:8848
+        server-addr: ${NACOS_HOST:127.0.0.1}:${NACOS_PORT:8848}
 dubbo:
 #  scan:
 #    base-packages: com.github.comctrl.consumer.controller
@@ -22,7 +22,7 @@ dubbo:
     subscribed-services: dubbo-provider
 
 server:
-  port: 8080
+  port: ${PORT:5000}
 
 endpoints:
   dubbo:
